@@ -1,18 +1,18 @@
 (class_declaration
     (access_modifier)? @context
-    (type_declaration_modifier)* @context
+    (modifier)* @context
     "class" @context
     (unqualified_type) @name
     ; TODO: should we include what this interface extends?
 ) @item
 
 (constructor_declaration
-    (constructor_declaration_modifier)* @context
+    (modifier)* @context
     "construct" @context
 ) @item
 
 (destructor_declaration
-    (constructor_declaration_modifier)* @context
+    (modifier)* @context
     "~" @name
     (identifier) @name
     "(" @context
@@ -21,7 +21,7 @@
 
 (property_declaration
     (access_modifier)? @context
-    (member_declaration_modifier)* @context
+    (modifier)* @context
     (type) @context
     (symbol) @name
     ; TODO: is there a way to show get/set in the outline?
@@ -29,14 +29,14 @@
 
 (field_declaration
     (access_modifier)? @context
-    (member_declaration_modifier)* @context
+    (modifier)* @context
     (type) @context
     (identifier) @name
 ) @item
 
 (enum_declaration
     (access_modifier)? @context
-    (type_declaration_modifier)* @context
+    (modifier)* @context
     "enum" @context
     (symbol) @name
 ) @item
@@ -48,7 +48,7 @@
 
 (constant_declaration
     (access_modifier)? @context
-    (member_declaration_modifier)* @context
+    (modifier)* @context
     "const" @context
     (type) @context
     (identifier) @name
@@ -56,7 +56,7 @@
 
 (method_declaration
     (access_modifier)? @context
-    (member_declaration_modifier)* @context
+    (modifier)* @context
     (type) @context
     (symbol) @name
     (type_arguments)? @context
@@ -72,7 +72,7 @@
 
 (creation_method_declaration
     (access_modifier)? @context
-    (member_declaration_modifier)* @context
+    (modifier)* @context
     (symbol) @name
     "(" @context
     (
@@ -86,7 +86,7 @@
 
 (interface_declaration
     (access_modifier)? @context
-    (type_declaration_modifier)* @context
+    (modifier)* @context
     "interface" @context
     (unqualified_type) @name
     ; TODO: should we include what this interface extends?
@@ -94,21 +94,21 @@
 
 (struct_declaration
     (access_modifier)? @context
-    (type_declaration_modifier)* @context
+    (modifier)* @context
     "struct" @context
     (unqualified_type) @name
 ) @item
 
 (errordomain_declaration
     (access_modifier)? @context
-    (type_declaration_modifier)* @context
+    (modifier)* @context
     "errordomain" @context
     (symbol) @name
 ) @item
 
 (delegate_declaration
     (access_modifier)? @context
-    (delegate_declaration_modifier)* @context
+    (modifier)* @context
     "delegate" @context
     (type) @context
     (symbol) @name
@@ -125,7 +125,7 @@
 
 (signal_declaration
     (access_modifier)? @context
-    (signal_declaration_modifier)* @context
+    (modifier)* @context
     "signal" @context
     (type) @context
     (symbol) @name

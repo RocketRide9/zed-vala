@@ -1,5 +1,7 @@
 # zed-vala
 
+VBB's fork of https://github.com/FyraLabs/zed-vala with support for forked `tree-sitter-vala` grammar until changes are merged into the main repository.
+
 [Vala](https://vala.dev) support for Zed.
 Please note that [vala-language-server](https://github.com/vala-lang/vala-language-server) is required to be installed on the system at this time.
 For formatting, you will need to install [uncrustify](https://github.com/uncrustify/uncrustify) on the system.

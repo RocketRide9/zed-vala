@@ -233,6 +233,7 @@
   "protected"
   "public"
   "static"
+  "sealed"
 ] @keyword.modifier
 
 [
