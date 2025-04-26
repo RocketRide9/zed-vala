@@ -24,7 +24,20 @@
     (modifier)* @context
     (type) @context
     (symbol) @name
-    ; TODO: is there a way to show get/set in the outline?
+    "{" @context
+    (property_accessor
+        (access_modifier)? @context
+        (property_accessor_type) @context
+        ";"? @context
+        (block
+            "{" @context
+            "}" @context
+        )?
+    )+
+    "}" @context
+    ; TODO: decide what should be shown in the outline
+    ; currently it's: `public int some_int { get; set; }` or `public int some_int { get { } set { } }` for properties
+    ; and `int some_int ;` for fields
 ) @item
 
 (field_declaration
@@ -32,6 +45,7 @@
     (modifier)* @context
     (type) @context
     (identifier) @name
+    ";" @context
 ) @item
 
 (enum_declaration
